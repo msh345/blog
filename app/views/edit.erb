@@ -1,0 +1,4 @@
+<h1>Edit Your Post</h1>
+<form action="/post/<%= @post.id %>" method="POST">
+	<%= erb :_form_fields, layout: false, locals: {tag: @tags} %>
+</form>

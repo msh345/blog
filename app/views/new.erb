@@ -1,0 +1,7 @@
+<h1>Create a New Post</h1>
+
+<p><%= @error if @error %></p><br>
+
+<form action="/new" method="POST">
+	<%= erb :_form_fields, layout: false %>
+</form>

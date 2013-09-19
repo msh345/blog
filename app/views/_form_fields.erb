@@ -1,0 +1,8 @@
+<label for="title">Title:	</label>
+<input type="text" name="post[title]" value="<%= @post.try(:title) %>">
+<label for="body">Body: </label>
+<textarea name="post[body]" cols="30" rows="10"><%= @post.try(:body) %></textarea>
+<label for="tags">Tags (comma separated):	</label>
+<input type="text" name="tags" value="<%= @tags %>"><br>
+
+<input type="submit">

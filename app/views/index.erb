@@ -1,0 +1,9 @@
+<h1>The Totally Awesome Blog Site</h1>
+  
+<h3>All Posts</h3>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><a href="/post/<%= post.id %>"><%= post.title %></a></li>
+  <% end %>
+</ul>

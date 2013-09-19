@@ -1,0 +1,21 @@
+<h1><%= @post.title %></h1>
+
+<p><%= @post.body %></p>
+
+<h3>Tags</h3>
+
+<ul>
+<% @tags.each do |tag| %>
+	<li><a href="/tag/<%= tag.name %>"><%= tag.name %></a></li>
+<% end %>
+</ul>
+
+
+<form action="/post/<%= @post.id %>/edit" method="POST">
+	<input type="submit" value="Edit">
+</form><br>
+
+<form action="/post/<%= @post.id %>/delete" method="POST">
+	<input type="submit" value="Delete">
+</form>
+
