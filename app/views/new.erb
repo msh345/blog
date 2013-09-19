@@ -2,6 +2,6 @@
 
 <p><%= @error if @error %></p><br>
 
-<form action="/new" method="POST">
+<form action="/new<%= "/#{current_user.id}" %>" method="POST">
 	<%= erb :_form_fields, layout: false %>
 </form>

@@ -1,0 +1,12 @@
+<h1>My Posts</h1>
+
+<% if @posts == [] %>
+	<p>Looks like you don't have posts yet</p>
+	<p><a href="/new">Click here</a> to post</p>	
+<% end %>
+
+<ul>
+	<% @posts.each do |post| %>
+		<li><a href="/post/<%= post.id %>"><%= post.title %></a></li>
+	<% end %>
+</ul>
