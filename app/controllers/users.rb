@@ -5,12 +5,20 @@ get '/user/:id' do
     @user = User.find(params[:id])
     @posts = @user.posts
 
-    erb :user_posts
+    erb :my_posts
   else
     redirect to '/login'  
   end
 
 end
+
+
+get '/user/:id/posts' do
+	@user = User.find(params[:id])
+	@posts = @user.posts
+	erb :user_posts
+end
+
 
 post '/signup' do
   @user = User.create(params[:user])

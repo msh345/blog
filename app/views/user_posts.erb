@@ -1,12 +1,11 @@
-<h1>My Posts</h1>
+<h1>Posts by <%= @user.user_name %></h1>
 
 <% if @posts == [] %>
-	<p>Looks like you don't have posts yet</p>
-	<p><a href="/new">Click here</a> to post</p>	
+	<p><%= @user.user_name %> does not have posts yet</p>
 <% end %>
 
 <ul>
-	<% @posts.each do |post| %>
-		<li><a href="/post/<%= post.id %>"><%= post.title %></a></li>
-	<% end %>
+<% @posts.each do |post| %>
+	<li><a href="/post/<%= post.id %>"><%= post.title %></a></li>
+<% end %>
 </ul>
